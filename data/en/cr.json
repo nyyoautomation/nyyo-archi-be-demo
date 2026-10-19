@@ -5,7 +5,7 @@
  "short": "Weekly site meeting",
  "lead": "Your site-walk notes become structured minutes: attendees, progress by trade and actions with owner and due date. Actions are cross-checked against the previous minutes and the programme.",
  "project": {
-  "title": "Saltmarsh Health Center (fictional): site meeting #14, Tuesday 10/20/2026",
+  "title": "Saltmarsh Health Center (fictional): site meeting #14, Tuesday, Oct 20, 2026",
   "meta": [
    [
     "Client",
@@ -21,7 +21,7 @@
    ],
    [
     "Next meeting",
-    "10/27/2026, 9:00 am"
+    "Oct 27, 2026, 9:00 am"
    ]
   ],
   "firm": "Fieldline Architects, contract administration (fictional)"
@@ -69,28 +69,28 @@
    "src": "S1",
    "page": 1,
    "loc": "Trade 04",
-   "text": "Roof B: upstands done on the north side, south parapet remaining. Hydraseal says done by Friday 10/23."
+   "text": "Roof B: upstands done on the north side, south parapet remaining. Hydraseal says done by Friday, Oct 23."
   },
   {
    "id": "E3",
    "src": "S2",
    "page": 4,
    "loc": "Action 13.6",
-   "text": "Trade 04: redo the roof B membrane upstands. Due 10/16/2026."
+   "text": "Trade 04: redo the roof B membrane upstands. Due Oct 16, 2026."
   },
   {
    "id": "E4",
    "src": "S1",
    "page": 2,
    "loc": "Trade 07",
-   "text": "Drywall: second-floor partitions start Monday 10/26."
+   "text": "Drywall: second-floor partitions start Monday, Oct 26."
   },
   {
    "id": "E5",
    "src": "S3",
    "page": 2,
    "loc": "Task 58",
-   "text": "Second-floor partitions (trade 07): start 11/02/2026, after roof B is watertight."
+   "text": "Second-floor partitions (trade 07): start Nov 2, 2026, after roof B is watertight."
   },
   {
    "id": "E6",
@@ -104,7 +104,7 @@
    "src": "S2",
    "page": 5,
    "loc": "Action 13.9",
-   "text": "Trade 10: second-floor sleeves. Due 10/23/2026."
+   "text": "Trade 10: second-floor sleeves. Due Oct 23, 2026."
   },
   {
    "id": "E8",
@@ -118,7 +118,7 @@
    "src": "S1",
    "page": 2,
    "loc": "Other",
-   "text": "Next meeting: Tuesday 10/27, 9:00 am on site."
+   "text": "Next meeting: Tuesday, Oct 27, 9:00 am on site."
   },
   {
    "id": "E10",
@@ -170,7 +170,7 @@
  "checks": [
   {
    "id": "Q1",
-   "label": "Partitions not before the programme date (11/02/2026)",
+   "label": "Partitions not before the programme date (Nov 2, 2026)",
    "ref": "E5",
    "rule": {
     "f": "cloisons",
@@ -179,7 +179,7 @@
     "vf": null
    },
    "ok": "Start {cloisons}: in line with the programme",
-   "ko": "Start {cloisons}: before the 11/02 programme date"
+   "ko": "Start {cloisons}: before the Nov 2 programme date"
   },
   {
    "id": "Q2",
@@ -196,7 +196,7 @@
   },
   {
    "id": "Q3",
-   "label": "Next meeting after the 10/20 meeting",
+   "label": "Next meeting after the Oct 20 meeting",
    "ref": "E10",
    "rule": {
     "f": "prochaine",
@@ -235,7 +235,7 @@
       "todo": false
      },
      {
-      "t": "Trade 04 Roofing: roof B upstands done on the north side, south parapet remaining. Action 13.6 was due 10/16 and is still open.",
+      "t": "Trade 04 Roofing: roof B upstands done on the north side, south parapet remaining. Action 13.6 was due Oct 16 and is still open.",
       "cite": [
        "E2",
        "E3"
@@ -300,7 +300,7 @@
         "14.3",
         "10",
         "Install second-floor conduit sleeves; written reminder",
-        "10/23/2026",
+        "Oct 23, 2026",
         "Chased (was 13.9)"
        ],
        "cite": [
@@ -313,7 +313,7 @@
         "14.4",
         "07",
         "Move plasterboard into an enclosed area",
-        "10/21/2026",
+        "Oct 21, 2026",
         "New"
        ],
        "cite": [
@@ -347,12 +347,12 @@
     {
      "e": "E4",
      "label": "Your notes",
-     "v": "Start 10/26"
+     "v": "Start Oct 26"
     },
     {
      "e": "E5",
      "label": "Programme rev. E, task 58",
-     "v": "Start 11/02, after the roof"
+     "v": "Start Nov 2, after the roof"
     }
    ],
    "impact": "Boards installed before the roof is finished risk moisture damage and rework.",
@@ -367,12 +367,12 @@
     {
      "e": "E3",
      "label": "Minutes #13",
-     "v": "Due 10/16"
+     "v": "Due Oct 16"
     },
     {
      "e": "E2",
      "label": "Your notes",
-     "v": "Now expected 10/23"
+     "v": "Now expected Oct 23"
     }
    ],
    "impact": "7 days late on trade 04, which holds up trade 07.",
@@ -387,7 +387,7 @@
     {
      "e": "E7",
      "label": "Minutes #13, action 13.9",
-     "v": "Due 10/23"
+     "v": "Due Oct 23"
     },
     {
      "e": "E6",
@@ -412,7 +412,7 @@
     {
      "e": "E9",
      "label": "Your notes",
-     "v": "Tuesday 10/27, 9:00 am"
+     "v": "Tuesday, Oct 27, 9:00 am"
     }
    ],
    "impact": "No discrepancy.",
@@ -447,7 +447,7 @@
   "stats": [
    [
     "≈ 63 h",
-    "a year over 40 meetings at this pace (estimate)"
+    "a year over 40 meetings: estimate on this fictional sample, not a measurement"
    ],
    [
     "3",

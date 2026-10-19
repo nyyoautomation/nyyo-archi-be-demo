@@ -20,8 +20,8 @@
       checksOk: (n, t) => `${n}/${t} contrôles au vert`, impact: "Impact", action: "Action proposée",
       todo: "À compléter", srcKicker: "Extrait de la pièce (fictive)", openSrc: "Voir l'extrait", fromDoc: "Extraits utilisés dans cette pièce",
       inputKicker: "Votre saisie", stale: "Vos saisies ont changé : le brouillon est mis à jour.",
-      saved: (b, a) => `≈ ${Math.round((1 - a / b) * 100)} %`, savedLbl: "de temps en moins sur ce cas (estimation sur l'échantillon)",
-      total: "Total", errAvoid: "Erreurs évitées sur l'échantillon : ",
+      saved: (b, a) => `≈ ${Math.round((1 - a / b) * 100)} %`, savedLbl: "de temps en moins sur ce cas : estimation sur cet échantillon fictif, pas une mesure",
+      total: "Total", errAvoid: "Erreurs évitées sur cet échantillon fictif : ",
       docxLoading: "La bibliothèque Word se charge encore. Réessayez dans une seconde.",
       docxWarn: "RELECTURE HUMAINE OBLIGATOIRE. Données fictives de démonstration. Votre agence reste seule responsable de tout document réel. Les écarts signalés sont des propositions : une personne tranche.",
       docxHeader: "Brouillon · relecture humaine obligatoire · données fictives",
@@ -41,8 +41,8 @@
       checksOk: (n, t) => `${n}/${t} checks passing`, impact: "Impact", action: "Suggested action",
       todo: "To complete", srcKicker: "Extract from the (fictional) document", openSrc: "View extract", fromDoc: "Extracts used from this document",
       inputKicker: "Your input", stale: "Your inputs changed: the draft has been updated.",
-      saved: (b, a) => `≈ ${Math.round((1 - a / b) * 100)}%`, savedLbl: "less time on this case (estimate on the sample)",
-      total: "Total", errAvoid: "Errors avoided on the sample: ",
+      saved: (b, a) => `≈ ${Math.round((1 - a / b) * 100)}%`, savedLbl: "less time on this case: estimate on this fictional sample, not a measurement",
+      total: "Total", errAvoid: "Errors avoided on this fictional sample: ",
       docxLoading: "The Word library is still loading. Try again in a second.",
       docxWarn: "HUMAN REVIEW REQUIRED. Fictional demo data. Your firm remains solely responsible for any real document. Flagged discrepancies are suggestions: a person decides.",
       docxHeader: "Draft · human review required · fictional data",
@@ -62,7 +62,8 @@
   const fieldDef = (id) => st.u.fields.find((f) => f.id === id);
 
   /* ---------- formatting & rules ---------- */
-  function fmtDate(v) { if (!v) return "—"; const [y, m, d] = v.split("-"); return LANG === "fr" ? `${d}/${m}/${y}` : `${m}/${d}/${y}`; }
+  const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  function fmtDate(v) { if (!v) return "—"; const [y, m, d] = v.split("-"); return LANG === "fr" ? `${d}/${m}/${y}` : `${MON[Number(m) - 1]} ${Number(d)}, ${y}`; }
   function fmt(id, v) {
     const f = fieldDef(id); if (!f) return String(v);
     if (f.type === "money") return T.money(v || 0);
