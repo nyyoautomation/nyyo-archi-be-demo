@@ -97,7 +97,7 @@
    "src": "S2",
    "page": 24,
    "loc": "Section 6.1",
-   "text": "Extension: net-zero-ready target, embodied carbon capped at 500 kgCO2e/m2. Refurbished areas: at least 40% lower final energy use."
+   "text": "Extension: net-zero-ready target, embodied carbon capped at 500 kgCO2e/m². Refurbished areas: at least 40% lower final energy use."
   },
   {
    "id": "E6",
@@ -125,7 +125,7 @@
    "src": "S4",
    "page": 3,
    "loc": "Project 2",
-   "text": "Hillcrest Nursery School (fictional): 1,200 m2 extension on a live site, completed 2024, $3.7M, phased over three school holidays."
+   "text": "Hillcrest Nursery School (fictional): 1,200 m² extension on a live site, completed 2024, $3.7M, phased over three school holidays."
   },
   {
    "id": "E10",
@@ -331,7 +331,7 @@
     "weight": 10,
     "items": [
      {
-      "t": "Extension designed to the net-zero-ready target and the 500 kgCO2e/m2 embodied carbon cap; refurbished areas aim for 40% lower energy use, tracked by the engineers from concept stage.",
+      "t": "Extension designed to the net-zero-ready target and the 500 kgCO2e/m² embodied carbon cap; refurbished areas aim for 40% lower energy use, tracked by the engineers from concept stage.",
       "cite": [
        "E5"
       ],
