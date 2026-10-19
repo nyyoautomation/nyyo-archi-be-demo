@@ -4,7 +4,7 @@
   const LANG = /^fr/i.test(document.documentElement.lang || "") ? "fr" : "en";
   const BASE = document.body.dataset.base || "./data/" + LANG + "/";
   const ORDER = ["memo", "cctp", "cr"];
-  const loc = LANG === "fr" ? "fr-FR" : "en-US";
+  const loc = "en-US";
   const SEP = LANG === "fr" ? " :" : ":";
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -27,7 +27,6 @@
   const T = {
     fr: {
       page: "p.", min: (m) => (m >= 60 ? Math.floor(m / 60) + " h" + (m % 60 ? " " + String(m % 60).padStart(2, "0") : "") : m + " min"),
-      money: (n) => Number(n).toLocaleString(loc) + " \u20ac HT",
       sev: { bad: "Contradiction", warn: "À vérifier", ok: "Cohérent" }, resolved: "Résolu par votre saisie",
       confirm: "Confirmer", dismiss: "Écarter", confirmed: "Confirmé", dismissed: "Écarté", pending: "À trancher",
       triage: (c, d, p) => `${c} confirmé(s) · ${d} écarté(s) · ${p} à trancher`,
