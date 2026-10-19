@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI for architecture and engineering firms: methodology statements, spec checks, site minutes · Nyyo Automation</title>
+  <meta name="description" content="No sign-up demo for architecture and engineering firms: draft a methodology statement on the scoring grid, cross-check specification, bill of quantities and drawings, and turn site notes into minutes. Every result cites its sources, with a contradiction check. Priced on quote." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#050814" />
+  <link rel="canonical" href="https://nyyoautomation.github.io/nyyo-archi-be-demo/" />
+  <meta property="og:title" content="AI for architecture and engineering firms: sourced drafts, contradictions caught · Nyyo Automation" />
+  <meta property="og:description" content="Methodology statement, spec ↔ BoQ ↔ drawings check, site meeting minutes. Fictional data, no sign-up, human review required." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://nyyoautomation.github.io/nyyo-archi-be-demo/assets/og.png" />
+  <meta property="og:url" content="https://nyyoautomation.github.io/nyyo-archi-be-demo/" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/nyyo-kit.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sectors.css" />
+  <link rel="stylesheet" href="css/archi.css" />
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body data-base="./data/en/">
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="https://github.com/nyyoautomation" aria-label="Nyyo Automation"><img src="assets/logo.png" alt="" width="34" height="34" /><span class="brand-name">Nyyo Automation</span></a>
+      <div class="top-actions"><a class="btn btn-ghost lang-toggle" href="fr/" hreflang="fr" lang="fr" aria-label="Switch language: FR">FR</a><a class="btn btn-primary" href="mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=AI%20for%20architecture%20%26%20engineering%20firms%20%E2%80%94%20quote%20request" aria-label="Contact us"><i data-lucide="mail"></i><span class="lbl">Contact us</span></a></div>
+    </div>
+
+    <header class="hero" id="hero">
+      <div class="hero-inner">
+        <span class="tag"><span class="dot"></span> Live demo · fictional projects · no sign-up</span>
+        <h1>Architecture & engineering firms: <span class="grad">sourced drafts, contradictions caught before they cost you</span></h1>
+        <p class="lead">Three tasks that eat your week, done on a fictional project: every sentence links back to the document and page it comes from, every result goes through a contradiction check, and your team signs off.</p>
+        <div class="sector-pick">
+          <span class="sp-label">Choose a use case</span>
+          <div class="sector-tabs uc-tabs" id="ucTabs" role="tablist" aria-label="Choose a use case"></div>
+        </div>
+        <p class="uc-lead" id="ucLead" aria-live="polite"></p>
+        <p class="host-line"><i data-lucide="cloud"></i><span><strong>Online first</strong>, isolated workspace, EU or US hosting / data region of your choice; local version as an option.</span></p>
+        <div class="hero-meta"><span>Pricing: <strong>On quote</strong></span><span><strong>Remote · Worldwide</strong></span><span><strong>Word export · sources cited</strong></span></div>
+        <div class="disclaimer-banner" role="note"><i data-lucide="shield-alert"></i><div><strong>Human review required.</strong> Every output is a draft your team checks and signs off. The tool does not design, does not replace your engineer's review and decides nothing. This page uses <em>fictional</em> documents only.</div></div>
+      </div>
+    </header>
+
+    <section class="panel value-panel" id="value" aria-label="What you get">
+      <div class="panel-head"><h2><i data-lucide="trending-up"></i> <span>What you get&nbsp;— <span id="valueUc"></span></span></h2><span class="badge-sample">Estimate on the sample</span></div>
+      <p class="value-case">Fictional case: <span id="valueCase"></span></p>
+      <div class="value-grid">
+        <div class="value-table-wrap"><table class="table value-table"><thead><tr><th>Step</th><th><i data-lucide="hourglass"></i> By hand</th><th><i data-lucide="zap"></i> With the tool</th></tr></thead><tbody id="valueRows"></tbody></table></div>
+        <div class="value-stats" id="valueStats"></div>
+      </div>
+      <ul class="value-points"><li><i data-lucide="quote"></i><span><strong>Every sentence is sourced:</strong> document, page and clause, one tap away.</span></li><li><i data-lucide="git-compare"></i><span><strong>Contradictions surfaced, not hidden:</strong> both documents shown side by side; you confirm or dismiss.</span></li><li><i data-lucide="file-text"></i><span><strong>Word draft ready to review:</strong> in your structure, with the check results and a source appendix.</span></li></ul>
+      <p class="value-foot"><i data-lucide="info"></i><span>Figures are an <strong>estimate on the fictional sample</strong>, not a promise or a guarantee. Real time depends on your project, your documents and your review, which remains mandatory.</span></p>
+    </section>
+
+    <section class="steps" aria-label="How it works" id="how"><div class="step" data-step="1"><span class="n">1</span><h3>Load the documents</h3><p>Brief, specifications, drawings, notes: the fictional set is already there.</p></div><div class="step" data-step="2"><span class="n">2</span><h3>Read the sourced result</h3><p>Each line cites its document and page; contradictions flagged.</p></div><div class="step" data-step="3"><span class="n">3</span><h3>Adjust and decide</h3><p>Change a value: checks update. Confirm or dismiss each discrepancy.</p></div><div class="step" data-step="4"><span class="n">4</span><h3>Export</h3><p>Word or PDF draft, with checks and sources.</p></div></section>
+
+    <div id="demoRoot" role="tabpanel">
+      <section class="panel" id="panelProject">
+        <div class="panel-head"><h2><i data-lucide="folder-open"></i> Fictional project and documents</h2><span class="badge-sample">Pre-analysed sample</span></div>
+        <p class="proj-title" id="projTitle"></p>
+        <div class="proj-meta" id="projMeta"></div>
+        <h3 class="h3s">Documents <small>tap a document to see the extracts</small></h3>
+        <div class="tender-files" id="srcFiles"></div>
+        <div class="pipe-box">
+          <h3 class="h3s">Analysis (replay)</h3>
+          <ol class="pipe-steps" id="pipeSteps"></ol>
+          <div class="pipe-track"><span id="pipeBar"></span></div>
+          <div class="actions-row"><button type="button" class="btn btn-primary" id="btnRun"><i data-lucide="play"></i> Replay the analysis</button><small class="doc-note">Pre-recorded result on this fictional set: nothing is sent anywhere.</small></div>
+        </div>
+      </section>
+
+      <section class="panel hidden" id="panelOut" aria-live="polite">
+        <div class="panel-head"><h2><i data-lucide="file-check-2"></i> <span id="outTitle"></span></h2><span class="badge-live">Draft · human review required</span></div>
+        <div class="disclaimer-banner review-banner" role="note"><i data-lucide="user-round-check"></i><div>Draft only. Check every statement and every source before using it on a real project. The tool proposes; your team decides.</div></div>
+        <p class="pill stale hidden" id="staleNote">Your inputs changed: the draft has been updated.</p>
+        <p class="doc-note" id="outSub"></p>
+        <div class="proposal-out" id="outBody"></div>
+
+        <div class="contra-box">
+          <div class="checks-head"><h3><i data-lucide="git-compare"></i> Contradiction check</h3><span class="pill" id="contraSummary"></span></div>
+          <p class="doc-note">Each card shows the documents that disagree. Confirm or dismiss: nothing is changed automatically.</p>
+          <div class="contra" id="contra"></div>
+        </div>
+
+        <div class="checks-box">
+          <div class="checks-head"><h3><i data-lucide="sliders-horizontal"></i> Your inputs, checked live</h3><span class="badge-live">Live · your values</span></div>
+          <p class="doc-note">Change a value: the checks, the draft and the contradiction cards update.</p>
+          <form class="form-grid" id="liveForm" onsubmit="return false"></form>
+          <div class="checks-head mt4"><h3><i data-lucide="shield-check"></i> Checks</h3><span class="pill" id="checksSummary"></span></div>
+          <ul class="checks" id="checks"></ul>
+        </div>
+        <div class="actions-row">
+          <button type="button" class="btn btn-primary" id="btnDocx"><i data-lucide="file-down"></i> Download Word (DOCX)</button>
+          <button type="button" class="btn btn-ghost" id="btnPdf"><i data-lucide="printer"></i> Export to PDF</button>
+        </div>
+      </section>
+    </div>
+
+    <section class="panel" id="plans">
+      <div class="panel-head"><h2><i data-lucide="cloud"></i> Pricing &amp; hosting</h2></div>
+      <div class="quote-card">
+        <div><span class="pill ok">Architecture and engineering firms</span><h3>On quote</h3><p class="trust-p">Pricing depends on the use cases you pick, your volume and the import of your past documents. We reply in writing, no commitment.</p><ul><li>Set up for your firm: your templates, vocabulary and checks</li><li>Import of your past statements, project references and standard specifications</li><li>Word output in your branding</li><li>Contradiction checks tuned to your document set</li></ul></div>
+        <div class="quote-cta"><a class="btn btn-primary" href="mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=AI%20for%20architecture%20%26%20engineering%20firms%20%E2%80%94%20quote%20request"><i data-lucide="mail"></i> Request a quote</a><small>Reply by email · <a href="mailto:LaborX (https://laborx.com/freelancers/users/id475124)">LaborX (https://laborx.com/freelancers/users/id475124)</a></small></div>
+      </div>
+      <div class="host-grid"><div class="own-card host-card default"><span class="pill ok">Default</span><h3><i data-lucide="cloud"></i> Online</h3><p class="trust-p"><strong>Online first</strong>, isolated workspace, EU or US hosting / data region of your choice; local version as an option.</p><ul><li>Nothing to install: everything runs in your browser.</li><li>One isolated workspace per firm; your data is used only for you, never to train the AI.</li><li>Limited, logged access; deletion on request.</li></ul></div><div class="own-card host-card"><span class="pill">Option</span><h3><i data-lucide="building-2"></i> Local version</h3><p class="trust-p">Installed on an office PC or mini-PC, built to run offline. Useful for confidential projects.</p><ul><li>No access to your data from our side on this option.</li><li>Local AI with an open model.</li></ul></div></div>
+    </section>
+
+    <section class="panel" id="trust">
+      <div class="panel-head"><h2><i data-lucide="shield-check"></i> Your data, protected</h2></div>
+      <p class="muted-p">We never take control of your computer: no remote-access tool, and we never ask for your passwords.</p>
+      <div class="trust-grid"><div class="own-card"><h3><i data-lucide="box"></i> Isolated workspace</h3><p class="trust-p">Each firm has its own workspace. Your projects and documents are never mixed with anyone else's.</p></div><div class="own-card"><h3><i data-lucide="map-pin"></i> Your data region</h3><p class="trust-p">EU or US hosting / data region of your choice. The AI is never trained on your data.</p></div><div class="own-card"><h3><i data-lucide="handshake"></i> Confidentiality agreement</h3><p class="trust-p">An NDA is signed before you share any real document. Try the fictional samples first.</p></div><div class="own-card"><h3><i data-lucide="quote"></i> Sources cited</h3><p class="trust-p">Every paragraph points to the document and page it comes from.</p></div><div class="own-card"><h3><i data-lucide="git-compare"></i> Contradictions shown</h3><p class="trust-p">Both conflicting documents are displayed; the tool never picks one silently.</p></div><div class="own-card"><h3><i data-lucide="user-round-check"></i> Always reviewed by you</h3><p class="trust-p">Your team checks and signs off every draft.</p></div></div>
+    </section>
+
+    <section class="panel" id="limits">
+      <div class="panel-head"><h2><i data-lucide="badge-alert"></i> Limits, openly</h2></div>
+      <ul class="limits"><li><strong>AI can be wrong</strong>: cited sources and the contradiction check reduce the risk without removing it.</li><li><strong>The tool does not design</strong>: the design concept and engineering decisions stay with your architects and engineers.</li><li><strong>No sign-off replaced</strong>: flagged discrepancies are suggestions; a qualified person decides.</li><li><strong>No win or score guaranteed</strong>: we structure the statement to the grid; we don't predict the jury's decision.</li><li><strong>Indicative times</strong>: durations shown are estimates on the fictional sample, not a commitment.</li><li><strong>This demo</strong>: the analyses are <em>pre-recorded</em> (replay). Live checks, triage and Word export really run in your browser, on fictional data.</li></ul>
+    </section>
+
+    <footer class="site-foot"><p>Nyyo Automation · <a href="mailto:LaborX (https://laborx.com/freelancers/users/id475124)">LaborX (https://laborx.com/freelancers/users/id475124)</a> · Remote · Worldwide · Fictional sample data</p></footer>
+  </div>
+
+  <div class="sticky-hire">
+    <a class="btn btn-primary" href="mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=AI%20for%20architecture%20%26%20engineering%20firms%20%E2%80%94%20quote%20request"><i data-lucide="mail"></i> Request a quote</a>
+    <button type="button" class="btn btn-ghost" id="btnRunSticky" aria-label="Replay the sample"><i data-lucide="play"></i><span class="lbl">Replay the sample</span></button>
+  </div>
+
+  <dialog id="srcModal" class="src-modal" aria-label="Source extract">
+    <div class="src-inner">
+      <button type="button" class="btn btn-ghost src-close" id="srcClose" aria-label="Close"><i data-lucide="x"></i></button>
+      <div id="srcBody"></div>
+    </div>
+  </dialog>
+  <div id="printRoot" class="hidden"></div>
+</body>
+</html>

@@ -1,0 +1,467 @@
+{
+ "id": "cr",
+ "icon": "clipboard-list",
+ "name": "Site meeting minutes",
+ "short": "Weekly site meeting",
+ "lead": "Your site-walk notes become structured minutes: attendees, progress by trade and actions with owner and due date. Actions are cross-checked against the previous minutes and the programme.",
+ "project": {
+  "title": "Saltmarsh Health Center (fictional): site meeting #14, Tuesday 10/20/2026",
+  "meta": [
+   [
+    "Client",
+    "Saltmarsh Health Partners (fictional)"
+   ],
+   [
+    "Stage",
+    "Construction"
+   ],
+   [
+    "Trades present",
+    "02, 04, 07 (10 sent apologies)"
+   ],
+   [
+    "Next meeting",
+    "10/27/2026, 9:00 am"
+   ]
+  ],
+  "firm": "Fieldline Architects, contract administration (fictional)"
+ },
+ "sources": [
+  {
+   "id": "S1",
+   "name": "Site_Notes_14.txt",
+   "kind": "Your site-walk notes",
+   "pages": 2,
+   "unit": "p."
+  },
+  {
+   "id": "S2",
+   "name": "Minutes_Meeting_13.pdf",
+   "kind": "Previous minutes (#13)",
+   "pages": 6,
+   "unit": "p."
+  },
+  {
+   "id": "S3",
+   "name": "Master_Programme_RevE.pdf",
+   "kind": "Master programme, rev. E",
+   "pages": 3,
+   "unit": "p."
+  },
+  {
+   "id": "S4",
+   "name": "Site_Photos_14.zip",
+   "kind": "Captioned site photos",
+   "pages": 12,
+   "unit": "photos"
+  }
+ ],
+ "extracts": [
+  {
+   "id": "E1",
+   "src": "S1",
+   "page": 1,
+   "loc": "Attendees",
+   "text": "Architect Fieldline (C. Holden), Keystone (building services), trade 02 Masonry Northbuild, trade 04 Roofing Hydraseal, trade 07 Drywall Plainwall. Apologies: trade 10 Electrical."
+  },
+  {
+   "id": "E2",
+   "src": "S1",
+   "page": 1,
+   "loc": "Trade 04",
+   "text": "Roof B: upstands done on the north side, south parapet remaining. Hydraseal says done by Friday 10/23."
+  },
+  {
+   "id": "E3",
+   "src": "S2",
+   "page": 4,
+   "loc": "Action 13.6",
+   "text": "Trade 04: redo the roof B membrane upstands. Due 10/16/2026."
+  },
+  {
+   "id": "E4",
+   "src": "S1",
+   "page": 2,
+   "loc": "Trade 07",
+   "text": "Drywall: second-floor partitions start Monday 10/26."
+  },
+  {
+   "id": "E5",
+   "src": "S3",
+   "page": 2,
+   "loc": "Task 58",
+   "text": "Second-floor partitions (trade 07): start 11/02/2026, after roof B is watertight."
+  },
+  {
+   "id": "E6",
+   "src": "S1",
+   "page": 2,
+   "loc": "Trade 10",
+   "text": "Second-floor conduit sleeves not done. Trade 10 absent, chase up."
+  },
+  {
+   "id": "E7",
+   "src": "S2",
+   "page": 5,
+   "loc": "Action 13.9",
+   "text": "Trade 10: second-floor sleeves. Due 10/23/2026."
+  },
+  {
+   "id": "E8",
+   "src": "S4",
+   "page": 7,
+   "loc": "Photo 7",
+   "text": "Plasterboard stored under a tarp in an area that is not enclosed: moisture risk."
+  },
+  {
+   "id": "E9",
+   "src": "S1",
+   "page": 2,
+   "loc": "Other",
+   "text": "Next meeting: Tuesday 10/27, 9:00 am on site."
+  },
+  {
+   "id": "E10",
+   "src": "S2",
+   "page": 1,
+   "loc": "Header",
+   "text": "Weekly site meetings, Tuesdays at 9:00 am."
+  },
+  {
+   "id": "E11",
+   "src": "S1",
+   "page": 1,
+   "loc": "Trade 02",
+   "text": "Masonry: third-floor walls complete, west window sills remaining. No safety issues."
+  }
+ ],
+ "steps": [
+  "Reading your notes and captioned photos",
+  "Carrying over actions from minutes #13 and their status",
+  "Cross-checking against programme rev. E",
+  "Structured minutes, contradictions flagged"
+ ],
+ "fields": [
+  {
+   "id": "cloisons",
+   "label": "Second-floor partitions start (trade 07)",
+   "type": "date",
+   "value": "2026-10-26",
+   "unit": "",
+   "hint": "Date given in the meeting"
+  },
+  {
+   "id": "etanch",
+   "label": "New due date, roof B membrane (trade 04)",
+   "type": "date",
+   "value": "2026-10-23",
+   "unit": "",
+   "hint": ""
+  },
+  {
+   "id": "prochaine",
+   "label": "Next meeting",
+   "type": "date",
+   "value": "2026-10-27",
+   "unit": "",
+   "hint": ""
+  }
+ ],
+ "checks": [
+  {
+   "id": "Q1",
+   "label": "Partitions not before the programme date (11/02/2026)",
+   "ref": "E5",
+   "rule": {
+    "f": "cloisons",
+    "op": ">=",
+    "v": "2026-11-02",
+    "vf": null
+   },
+   "ok": "Start {cloisons}: in line with the programme",
+   "ko": "Start {cloisons}: before the 11/02 programme date"
+  },
+  {
+   "id": "Q2",
+   "label": "Roof watertight before partitions start",
+   "ref": "E5",
+   "rule": {
+    "f": "etanch",
+    "op": "<",
+    "v": null,
+    "vf": "cloisons"
+   },
+   "ok": "Roof done {etanch}, before partitions",
+   "ko": "Roof done {etanch}: not before partitions"
+  },
+  {
+   "id": "Q3",
+   "label": "Next meeting after the 10/20 meeting",
+   "ref": "E10",
+   "rule": {
+    "f": "prochaine",
+    "op": ">",
+    "v": "2026-10-20",
+    "vf": null
+   },
+   "ok": "Meeting #15 on {prochaine}",
+   "ko": "Date to fix: {prochaine}"
+  }
+ ],
+ "output": {
+  "title": "Site meeting #14 minutes: draft for review",
+  "sub": "Written from your notes. Each line links back to the note, photo or document it came from.",
+  "sections": [
+   {
+    "h": "Attendees",
+    "items": [
+     {
+      "t": "Architect Fieldline (C. Holden), Keystone, trades 02, 04 and 07. Apologies: trade 10 Electrical.",
+      "cite": [
+       "E1"
+      ],
+      "todo": false
+     }
+    ]
+   },
+   {
+    "h": "Progress by trade",
+    "items": [
+     {
+      "t": "Trade 02 Masonry: third-floor walls complete; west window sills remaining.",
+      "cite": [
+       "E11"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Trade 04 Roofing: roof B upstands done on the north side, south parapet remaining. Action 13.6 was due 10/16 and is still open.",
+      "cite": [
+       "E2",
+       "E3"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Trade 07 Drywall: second-floor partitions announced to start {cloisons}.",
+      "cite": [
+       "E4"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Trade 10 Electrical: second-floor sleeves not done, contractor absent.",
+      "cite": [
+       "E6"
+      ],
+      "todo": false
+     }
+    ]
+   },
+   {
+    "h": "Actions",
+    "table": {
+     "head": [
+      "#",
+      "Trade",
+      "Action",
+      "Due",
+      "Status"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "14.1",
+        "04",
+        "Finish the south parapet membrane upstands, roof B",
+        "{etanch}",
+        "Late (was 13.6)"
+       ],
+       "cite": [
+        "E2",
+        "E3"
+       ]
+      },
+      {
+       "cells": [
+        "14.2",
+        "07",
+        "Start second-floor partitions once the building is watertight",
+        "{cloisons}",
+        "To confirm"
+       ],
+       "cite": [
+        "E4",
+        "E5"
+       ]
+      },
+      {
+       "cells": [
+        "14.3",
+        "10",
+        "Install second-floor conduit sleeves; written reminder",
+        "10/23/2026",
+        "Chased (was 13.9)"
+       ],
+       "cite": [
+        "E6",
+        "E7"
+       ]
+      },
+      {
+       "cells": [
+        "14.4",
+        "07",
+        "Move plasterboard into an enclosed area",
+        "10/21/2026",
+        "New"
+       ],
+       "cite": [
+        "E8"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "h": "Next meeting",
+    "items": [
+     {
+      "t": "Tuesday {prochaine}, 9:00 am on site.",
+      "cite": [
+       "E9",
+       "E10"
+      ],
+      "todo": false
+     }
+    ]
+   }
+  ]
+ },
+ "contradictions": [
+  {
+   "id": "C1",
+   "sev": "bad",
+   "title": "Partitions announced before the building is watertight per the programme",
+   "sides": [
+    {
+     "e": "E4",
+     "label": "Your notes",
+     "v": "Start 10/26"
+    },
+    {
+     "e": "E5",
+     "label": "Programme rev. E, task 58",
+     "v": "Start 11/02, after the roof"
+    }
+   ],
+   "impact": "Boards installed before the roof is finished risk moisture damage and rework.",
+   "action": "Confirm the date in the meeting or update the programme.",
+   "live": "Q1"
+  },
+  {
+   "id": "C2",
+   "sev": "warn",
+   "title": "Action 13.6 overdue and still open",
+   "sides": [
+    {
+     "e": "E3",
+     "label": "Minutes #13",
+     "v": "Due 10/16"
+    },
+    {
+     "e": "E2",
+     "label": "Your notes",
+     "v": "Now expected 10/23"
+    }
+   ],
+   "impact": "7 days late on trade 04, which holds up trade 07.",
+   "action": "Record the delay in the minutes and track action 14.1.",
+   "live": null
+  },
+  {
+   "id": "C3",
+   "sev": "warn",
+   "title": "Trade 10 absent while an action falls due",
+   "sides": [
+    {
+     "e": "E7",
+     "label": "Minutes #13, action 13.9",
+     "v": "Due 10/23"
+    },
+    {
+     "e": "E6",
+     "label": "Your notes",
+     "v": "Not done, contractor absent"
+    }
+   ],
+   "impact": "Due date likely missed.",
+   "action": "Send a written reminder with the minutes.",
+   "live": null
+  },
+  {
+   "id": "C4",
+   "sev": "ok",
+   "title": "Next meeting date matches the weekly rhythm",
+   "sides": [
+    {
+     "e": "E10",
+     "label": "Minutes #13",
+     "v": "Tuesdays 9:00 am"
+    },
+    {
+     "e": "E9",
+     "label": "Your notes",
+     "v": "Tuesday 10/27, 9:00 am"
+    }
+   ],
+   "impact": "No discrepancy.",
+   "action": "Nothing to do.",
+   "live": "Q3"
+  }
+ ],
+ "value": {
+  "case": "weekly meeting, 4 trades, 2 pages of notes, 12 photos, the previous minutes and the programme.",
+  "rows": [
+   [
+    "Clean up the notes and attendee list",
+    40,
+    5
+   ],
+   [
+    "Carry over previous actions and their status",
+    30,
+    3
+   ],
+   [
+    "Cross-check against the programme",
+    20,
+    2
+   ],
+   [
+    "Lay out and prepare for distribution",
+    20,
+    5
+   ]
+  ],
+  "stats": [
+   [
+    "≈ 63 h",
+    "a year over 40 meetings at this pace (estimate)"
+   ],
+   [
+    "3",
+    "issues to flag, caught before distribution"
+   ]
+  ],
+  "errors": [
+   "a trade starting before the building is watertight",
+   "an overdue action lost between two sets of minutes"
+  ],
+  "total": [
+   110,
+   15
+  ]
+ },
+ "docx": "site-meeting-14-minutes-saltmarsh-draft"
+}

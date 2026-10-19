@@ -1,0 +1,427 @@
+{
+ "id": "cctp",
+ "icon": "git-compare",
+ "name": "Spec ↔ BoQ ↔ drawings",
+ "short": "Check before issuing tender documents",
+ "lead": "Before the tender set goes out, every specification clause is matched to the bill of quantities and the drawings. Discrepancies are listed with evidence, and your engineer makes the call.",
+ "project": {
+  "title": "Larkfield Primary School (fictional): tender documents stage, packages 02 Concrete and 06 Windows",
+  "meta": [
+   [
+    "Client",
+    "Ashby Vale Town Council (fictional)"
+   ],
+   [
+    "Stage",
+    "Technical design to tender"
+   ],
+   [
+    "Drawings",
+    "Revision C"
+   ],
+   [
+    "Planned issue",
+    "01/18/2027"
+   ]
+  ],
+  "firm": "Keystone Engineering (fictional) for Fieldline Architects (fictional)"
+ },
+ "sources": [
+  {
+   "id": "S1",
+   "name": "Spec_02_Concrete.pdf",
+   "kind": "Specification, package 02",
+   "pages": 34,
+   "unit": "p."
+  },
+  {
+   "id": "S2",
+   "name": "BoQ_02_Concrete.xlsx",
+   "kind": "Bill of quantities, package 02",
+   "pages": 148,
+   "unit": "lines"
+  },
+  {
+   "id": "S3",
+   "name": "STR_Drawings_RevC.pdf",
+   "kind": "Structural drawings, rev. C",
+   "pages": 12,
+   "unit": "sheets"
+  },
+  {
+   "id": "S4",
+   "name": "Spec_06_Windows.pdf",
+   "kind": "Specification, package 06",
+   "pages": 18,
+   "unit": "p."
+  },
+  {
+   "id": "S5",
+   "name": "BoQ_06_Windows.xlsx",
+   "kind": "Bill of quantities, package 06",
+   "pages": 62,
+   "unit": "lines"
+  },
+  {
+   "id": "S6",
+   "name": "Acoustic_Report.pdf",
+   "kind": "Acoustic report",
+   "pages": 8,
+   "unit": "p."
+  },
+  {
+   "id": "S7",
+   "name": "ARCH_Drawings_RevC.pdf",
+   "kind": "Architectural drawings, rev. C",
+   "pages": 16,
+   "unit": "sheets"
+  },
+  {
+   "id": "S8",
+   "name": "Design_Brief_Larkfield.pdf",
+   "kind": "Client design brief",
+   "pages": 38,
+   "unit": "p."
+  }
+ ],
+ "extracts": [
+  {
+   "id": "E1",
+   "src": "S1",
+   "page": 12,
+   "loc": "Clause 3.4.2",
+   "text": "Extension ground-floor roof slab: solid reinforced concrete, 220 mm thick, concrete class C30/37."
+  },
+  {
+   "id": "E2",
+   "src": "S3",
+   "page": 4,
+   "loc": "Sheet S-104, section AA",
+   "text": "Ground-floor roof slab: 200 mm, C30/37."
+  },
+  {
+   "id": "E3",
+   "src": "S2",
+   "page": 31,
+   "loc": "Line 2.3.4",
+   "text": "Solid reinforced concrete slab 200 mm, C30/37, m2, 640."
+  },
+  {
+   "id": "E4",
+   "src": "S1",
+   "page": 17,
+   "loc": "Clause 3.7.3",
+   "text": "Cast-in-place reinforced concrete ground beams under the north elevation, 300 x 500 mm, reinforcement included."
+  },
+  {
+   "id": "E5",
+   "src": "S2",
+   "page": 18,
+   "loc": "Section 2.3 Foundations",
+   "text": "Lines 2.3.1 Strip footings, 2.3.2 Pad footings, 2.3.3 Mass concrete. No ground beam line."
+  },
+  {
+   "id": "E6",
+   "src": "S4",
+   "page": 6,
+   "loc": "Clause 4.2",
+   "text": "Thermally broken aluminium windows, Uw 1.3 W/m2K or better. Street elevations: sound reduction Rw+Ctr of at least 33 dB."
+  },
+  {
+   "id": "E7",
+   "src": "S6",
+   "page": 3,
+   "loc": "Section 2",
+   "text": "Boulevard elevation: required facade insulation of at least 35 dB, i.e. windows of at least 36 dB Rw+Ctr."
+  },
+  {
+   "id": "E8",
+   "src": "S5",
+   "page": 9,
+   "loc": "Line 6.1.2",
+   "text": "Aluminium window, street elevation, 33 dB Rw+Ctr, nr, 24."
+  },
+  {
+   "id": "E9",
+   "src": "S5",
+   "page": 11,
+   "loc": "Line 6.1.7",
+   "text": "Aluminium window, courtyard elevation, type C2, nr, 18."
+  },
+  {
+   "id": "E10",
+   "src": "S7",
+   "page": 9,
+   "loc": "Sheet A-201",
+   "text": "Courtyard elevation: 16 windows of type C2."
+  },
+  {
+   "id": "E11",
+   "src": "S1",
+   "page": 5,
+   "loc": "Clause 1.6",
+   "text": "All work complies with the 2012 edition of the energy code."
+  },
+  {
+   "id": "E12",
+   "src": "S8",
+   "page": 24,
+   "loc": "Section 6.1",
+   "text": "Extension: current energy code edition and net-zero-ready target."
+  },
+  {
+   "id": "E13",
+   "src": "S1",
+   "page": 12,
+   "loc": "Clause 3.4.1",
+   "text": "Slab and wall concrete: C30/37, exposure class XC1."
+  }
+ ],
+ "steps": [
+  "Reading specifications, bills of quantities, drawings and reports",
+  "Matching each clause to a BoQ line",
+  "Comparing values: thicknesses, performance, quantities",
+  "Sourced list of discrepancies, for your decision"
+ ],
+ "fields": [
+  {
+   "id": "seuil",
+   "label": "Alert threshold for quantity differences",
+   "type": "number",
+   "value": 5,
+   "unit": "%",
+   "hint": "Quantity differences below this threshold are not flagged"
+  }
+ ],
+ "checks": [
+  {
+   "id": "Q1",
+   "label": "Type C2 quantity difference (18 vs 16, i.e. 12.5%) under the threshold",
+   "ref": "E10",
+   "rule": {
+    "f": "seuil",
+    "op": ">=",
+    "v": 12.5,
+    "vf": null
+   },
+   "ok": "Threshold {seuil}%: difference tolerated",
+   "ko": "Threshold {seuil}%: difference flagged"
+  }
+ ],
+ "output": {
+  "title": "Discrepancy sheet to clear before issuing tender documents",
+  "sub": "Each item shows both documents involved, with the page. Nothing is corrected automatically.",
+  "sections": [
+   {
+    "h": "Questions to settle internally",
+    "items": [
+     {
+      "t": "Ground-floor roof slab: 220 mm (specification) or 200 mm (drawings and BoQ)? Confirm with the structural calculation before aligning the documents.",
+      "cite": [
+       "E1",
+       "E2",
+       "E3"
+      ],
+      "todo": false
+     },
+     {
+      "t": "North elevation ground beams: add a BoQ line in section 2.3, or delete clause 3.7.3 if the element was dropped.",
+      "cite": [
+       "E4",
+       "E5"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Street-side windows: raise the requirement to 36 dB Rw+Ctr in specification 06 and BoQ line 6.1.2, per the acoustic report.",
+      "cite": [
+       "E6",
+       "E7",
+       "E8"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Code reference: replace the 2012 energy code edition with the current edition in clause 1.6 of specification 02.",
+      "cite": [
+       "E11",
+       "E12"
+      ],
+      "todo": false
+     }
+    ]
+   },
+   {
+    "h": "Checked, no discrepancy",
+    "items": [
+     {
+      "t": "Concrete class C30/37: identical in the specification, the BoQ and the structural drawings.",
+      "cite": [
+       "E13",
+       "E2",
+       "E3"
+      ],
+      "todo": false
+     }
+    ]
+   }
+  ]
+ },
+ "contradictions": [
+  {
+   "id": "C1",
+   "sev": "bad",
+   "title": "Ground-floor roof slab thickness",
+   "sides": [
+    {
+     "e": "E1",
+     "label": "Spec 02, clause 3.4.2",
+     "v": "220 mm"
+    },
+    {
+     "e": "E2",
+     "label": "Sheet S-104 rev. C",
+     "v": "200 mm"
+    },
+    {
+     "e": "E3",
+     "label": "BoQ line 2.3.4",
+     "v": "200 mm"
+    }
+   ],
+   "impact": "Concrete and rebar quantities, and the structural calculation.",
+   "action": "Settle the thickness with the calculation, then align the specification or the drawings.",
+   "live": null
+  },
+  {
+   "id": "C2",
+   "sev": "bad",
+   "title": "Specified but not priced: north elevation ground beams",
+   "sides": [
+    {
+     "e": "E4",
+     "label": "Spec 02, clause 3.7.3",
+     "v": "Ground beams 300 x 500 mm"
+    },
+    {
+     "e": "E5",
+     "label": "BoQ section 2.3",
+     "v": "No line"
+    }
+   ],
+   "impact": "Missing from pricing, so a likely claim or change order during construction.",
+   "action": "Add the BoQ line or delete the clause.",
+   "live": null
+  },
+  {
+   "id": "C3",
+   "sev": "bad",
+   "title": "Acoustic performance of street-side windows",
+   "sides": [
+    {
+     "e": "E6",
+     "label": "Spec 06, clause 4.2",
+     "v": "33 dB"
+    },
+    {
+     "e": "E8",
+     "label": "BoQ line 6.1.2",
+     "v": "33 dB"
+    },
+    {
+     "e": "E7",
+     "label": "Acoustic report, section 2",
+     "v": "36 dB"
+    }
+   ],
+   "impact": "Facade insulation missed at handover, with costly remedial work.",
+   "action": "Raise the requirement to 36 dB in the specification and the BoQ.",
+   "live": null
+  },
+  {
+   "id": "C4",
+   "sev": "warn",
+   "title": "Quantity of type C2 courtyard windows",
+   "sides": [
+    {
+     "e": "E9",
+     "label": "BoQ line 6.1.7",
+     "v": "18 nr"
+    },
+    {
+     "e": "E10",
+     "label": "Sheet A-201 rev. C",
+     "v": "16 nr"
+    }
+   ],
+   "impact": "12.5% difference on the indicative quantity.",
+   "action": "Recount on the drawing and correct the BoQ.",
+   "live": "Q1"
+  },
+  {
+   "id": "C5",
+   "sev": "warn",
+   "title": "Superseded code reference",
+   "sides": [
+    {
+     "e": "E11",
+     "label": "Spec 02, clause 1.6",
+     "v": "2012 edition"
+    },
+    {
+     "e": "E12",
+     "label": "Brief, section 6.1",
+     "v": "Current edition"
+    }
+   ],
+   "impact": "A contract document pointing to a superseded standard.",
+   "action": "Update the reference.",
+   "live": null
+  }
+ ],
+ "value": {
+  "case": "packages 02 and 06: 2 specifications (52 pages), 2 bills of quantities (210 lines), structural and architectural drawings rev. C, 1 acoustic report.",
+  "rows": [
+   [
+    "Match every specification clause to the BoQ",
+    180,
+    15
+   ],
+   [
+    "Compare specification values with drawings and reports",
+    150,
+    20
+   ],
+   [
+    "Recount quantities on the drawings",
+    90,
+    10
+   ],
+   [
+    "Write the discrepancy sheet and questions",
+    60,
+    10
+   ]
+  ],
+  "stats": [
+   [
+    "5",
+    "sourced discrepancies on the sample, 3 of them blocking"
+   ],
+   [
+    "1",
+    "element specified but not priced, caught before issue"
+   ]
+  ],
+  "errors": [
+   "an unpriced element, a source of change orders",
+   "a window acoustic rating below the acoustic report",
+   "a slab thickness that differs between documents"
+  ],
+  "total": [
+   480,
+   55
+  ]
+ },
+ "docx": "discrepancy-sheet-spec-boq-larkfield"
+}

@@ -1,0 +1,455 @@
+{
+ "id": "memo",
+ "icon": "pen-line",
+ "name": "Methodology statement",
+ "short": "Design competitions & RFPs",
+ "lead": "The methodology statement for a design competition or a design-services RFP, structured on the buyer's scoring grid and built from your past projects and past statements.",
+ "project": {
+  "title": "Invited design competition: refurbishment and extension of Larkfield Primary School (fictional)",
+  "meta": [
+   [
+    "Client",
+    "Ashby Vale Town Council (fictional)"
+   ],
+   [
+    "Scope",
+    "Full design services, concept to handover"
+   ],
+   [
+    "Construction budget",
+    "$5,400,000"
+   ],
+   [
+    "Deadline",
+    "12/14/2026, 12:00 pm"
+   ]
+  ],
+  "firm": "Fieldline Architects (fictional) with Keystone Engineering (fictional)"
+ },
+ "sources": [
+  {
+   "id": "S1",
+   "name": "Competition_Brief_Larkfield.pdf",
+   "kind": "Competition rules",
+   "pages": 14,
+   "unit": "p."
+  },
+  {
+   "id": "S2",
+   "name": "Design_Brief_Larkfield.pdf",
+   "kind": "Client design brief",
+   "pages": 38,
+   "unit": "p."
+  },
+  {
+   "id": "S3",
+   "name": "Appointment_Terms.pdf",
+   "kind": "Terms of appointment",
+   "pages": 22,
+   "unit": "p."
+  },
+  {
+   "id": "S4",
+   "name": "Fieldline_Projects.docx",
+   "kind": "Your past projects (fictional)",
+   "pages": 9,
+   "unit": "p."
+  },
+  {
+   "id": "S5",
+   "name": "Methodology_2025.docx",
+   "kind": "Your previous statement (fictional)",
+   "pages": 12,
+   "unit": "p."
+  }
+ ],
+ "extracts": [
+  {
+   "id": "E1",
+   "src": "S1",
+   "page": 6,
+   "loc": "Clause 8.2",
+   "text": "Quality is scored on the methodology statement (50%): understanding of a live school site (20%), team organisation and resources (15%), approach to programme and cost control (15%). Sustainability approach (10%). Fee (40%)."
+  },
+  {
+   "id": "E2",
+   "src": "S1",
+   "page": 7,
+   "loc": "Clause 8.4",
+   "text": "The methodology statement must not exceed 10 pages, appendices excluded."
+  },
+  {
+   "id": "E3",
+   "src": "S1",
+   "page": 5,
+   "loc": "Clause 6.1",
+   "text": "Design duration, from concept to tender documents: 26 weeks maximum, excluding client sign-off periods."
+  },
+  {
+   "id": "E4",
+   "src": "S2",
+   "page": 11,
+   "loc": "Section 3.2",
+   "text": "Works take place on a live site: the school stays open throughout. Noisy or dusty works are limited to school holidays."
+  },
+  {
+   "id": "E5",
+   "src": "S2",
+   "page": 24,
+   "loc": "Section 6.1",
+   "text": "Extension: net-zero-ready target, embodied carbon capped at 500 kgCO2e/m2. Refurbished areas: at least 40% lower final energy use."
+  },
+  {
+   "id": "E6",
+   "src": "S2",
+   "page": 4,
+   "loc": "Section 1.3",
+   "text": "Construction budget: $5,400,000, September 2026 prices."
+  },
+  {
+   "id": "E7",
+   "src": "S3",
+   "page": 9,
+   "loc": "Clause 11.2",
+   "text": "Late delivery of design documents: liquidated damages of 0.1% of the stage fee per calendar day."
+  },
+  {
+   "id": "E8",
+   "src": "S2",
+   "page": 29,
+   "loc": "Section 7.4",
+   "text": "Target programme: extension structure from September 2027 to February 2028."
+  },
+  {
+   "id": "E9",
+   "src": "S4",
+   "page": 3,
+   "loc": "Project 2",
+   "text": "Hillcrest Nursery School (fictional): 1,200 m2 extension on a live site, completed 2024, $3.7M, phased over three school holidays."
+  },
+  {
+   "id": "E10",
+   "src": "S4",
+   "page": 6,
+   "loc": "Team",
+   "text": "Claire Holden, partner architect (fictional), project lead; Keystone Engineering (structures and building services, fictional); Sonora Acoustics (fictional); in-house cost consultant."
+  },
+  {
+   "id": "E11",
+   "src": "S5",
+   "page": 4,
+   "loc": "Section 3",
+   "text": "Cost control: estimate at every stage, variance review as soon as an overrun exceeds 3%, client decision before moving to the next stage."
+  },
+  {
+   "id": "E12",
+   "src": "S5",
+   "page": 7,
+   "loc": "Section 4.1",
+   "text": "We propose to complete design from concept to tender documents in 30 weeks."
+  }
+ ],
+ "steps": [
+  "Reading the competition rules, brief and appointment terms",
+  "Scoring grid and limits (pages, durations) found",
+  "Searching your past projects and statements",
+  "Outline weighted on the grid, contradiction check"
+ ],
+ "fields": [
+  {
+   "id": "duree",
+   "label": "Proposed design duration, concept to tender",
+   "type": "number",
+   "value": 30,
+   "unit": "weeks",
+   "hint": "Taken from your previous statement: to check"
+  },
+  {
+   "id": "chef",
+   "label": "Named project lead",
+   "type": "text",
+   "value": "Claire Holden (fictional)",
+   "unit": "",
+   "hint": ""
+  },
+  {
+   "id": "pages",
+   "label": "Estimated length of the statement",
+   "type": "number",
+   "value": 9,
+   "unit": "pages",
+   "hint": ""
+  },
+  {
+   "id": "env",
+   "label": "Construction budget quoted in the statement",
+   "type": "money",
+   "value": 5400000,
+   "unit": "",
+   "hint": ""
+  }
+ ],
+ "checks": [
+  {
+   "id": "Q1",
+   "label": "Design duration within the 26-week maximum",
+   "ref": "E3",
+   "rule": {
+    "f": "duree",
+    "op": "<=",
+    "v": 26,
+    "vf": null
+   },
+   "ok": "{duree} weeks: within the rules",
+   "ko": "{duree} weeks: over the 26-week maximum"
+  },
+  {
+   "id": "Q2",
+   "label": "Project lead named",
+   "ref": "E10",
+   "rule": {
+    "f": "chef",
+    "op": "nonempty",
+    "v": null,
+    "vf": null
+   },
+   "ok": "{chef}",
+   "ko": "Name someone"
+  },
+  {
+   "id": "Q3",
+   "label": "Statement within 10 pages",
+   "ref": "E2",
+   "rule": {
+    "f": "pages",
+    "op": "<=",
+    "v": 10,
+    "vf": null
+   },
+   "ok": "{pages} of 10 pages allowed",
+   "ko": "{pages} pages: over the 10-page limit"
+  },
+  {
+   "id": "Q4",
+   "label": "Budget matches the brief",
+   "ref": "E6",
+   "rule": {
+    "f": "env",
+    "op": "==",
+    "v": 5400000,
+    "vf": null
+   },
+   "ok": "{env}, as in the brief",
+   "ko": "{env}: differs from the brief ($5,400,000)"
+  }
+ ],
+ "output": {
+  "title": "Methodology statement: draft for review",
+  "sub": "Outline set by the scoring grid (clause 8.2): the space given to each part follows its weighting.",
+  "sections": [
+   {
+    "h": "1. Understanding a live school site",
+    "weight": 20,
+    "items": [
+     {
+      "t": "The school stays open throughout: we split the site into sealed zones, with a delivery route kept apart from children's routes.",
+      "cite": [
+       "E4"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Noisy and dusty works are scheduled in school holidays, as at Hillcrest, where works were phased over three holidays.",
+      "cite": [
+       "E4",
+       "E9"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Design concept and site reading: [TO WRITE: architect only]. The tool structures; it does not design.",
+      "cite": [],
+      "todo": true
+     }
+    ]
+   },
+   {
+    "h": "2. Team organisation and resources",
+    "weight": 15,
+    "items": [
+     {
+      "t": "Project lead: {chef}, single point of contact for the client from concept to handover.",
+      "cite": [
+       "E10"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Compact team: architect, structures and building services engineers, acoustician and in-house cost consultant, involved from concept stage.",
+      "cite": [
+       "E10"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Hours per stage and per team member: [TO COMPLETE from your fee sheet].",
+      "cite": [],
+      "todo": true
+     }
+    ]
+   },
+   {
+    "h": "3. Programme and cost control",
+    "weight": 15,
+    "items": [
+     {
+      "t": "Design from concept to tender documents in {duree} weeks, excluding client sign-off periods.",
+      "cite": [
+       "E3"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Cost tracked at every stage against the {env} budget: variance review from a 3% overrun, client decision before the next stage.",
+      "cite": [
+       "E6",
+       "E11"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Document delivery dates held stage by stage: the late-delivery damages in the terms are built into our internal programme.",
+      "cite": [
+       "E7"
+      ],
+      "todo": false
+     }
+    ]
+   },
+   {
+    "h": "4. Sustainability approach",
+    "weight": 10,
+    "items": [
+     {
+      "t": "Extension designed to the net-zero-ready target and the 500 kgCO2e/m2 embodied carbon cap; refurbished areas aim for 40% lower energy use, tracked by the engineers from concept stage.",
+      "cite": [
+       "E5"
+      ],
+      "todo": false
+     },
+     {
+      "t": "Material choices and carbon figures: [TO COMPLETE with your real data].",
+      "cite": [],
+      "todo": true
+     }
+    ]
+   }
+  ]
+ },
+ "contradictions": [
+  {
+   "id": "C1",
+   "sev": "bad",
+   "title": "Design duration: your previous statement exceeds the competition maximum",
+   "sides": [
+    {
+     "e": "E12",
+     "label": "Previous statement",
+     "v": "30 weeks"
+    },
+    {
+     "e": "E3",
+     "label": "Rules, clause 6.1",
+     "v": "26 weeks maximum"
+    }
+   ],
+   "impact": "A duration outside the rules can cost points or make the bid non-compliant.",
+   "action": "Use 26 weeks or less and adjust the internal programme.",
+   "live": "Q1"
+  },
+  {
+   "id": "C2",
+   "sev": "warn",
+   "title": "The brief contradicts itself: noisy works in holidays, but structure from September to February",
+   "sides": [
+    {
+     "e": "E4",
+     "label": "Brief, section 3.2",
+     "v": "Noisy works in school holidays"
+    },
+    {
+     "e": "E8",
+     "label": "Brief, section 7.4",
+     "v": "Structure Sep 2027 to Feb 2028"
+    }
+   ],
+   "impact": "The two requirements cannot both hold as written.",
+   "action": "Ask the client a clarification question before the deadline and propose a phasing in the statement.",
+   "live": null
+  },
+  {
+   "id": "C3",
+   "sev": "ok",
+   "title": "Construction budget: the statement quotes the brief's figure",
+   "sides": [
+    {
+     "e": "E6",
+     "label": "Brief, section 1.3",
+     "v": "$5,400,000"
+    },
+    {
+     "e": "env",
+     "label": "Your input",
+     "v": "{env}"
+    }
+   ],
+   "impact": "No discrepancy.",
+   "action": "Nothing to do.",
+   "live": "Q4"
+  }
+ ],
+ "value": {
+  "case": "invited competition, 10-page statement limit, 3 client documents and 2 internal documents to read.",
+  "rows": [
+   [
+    "Read rules, brief and terms; note the grid and limits",
+    120,
+    10
+   ],
+   [
+    "Find past projects and reusable paragraphs",
+    90,
+    5
+   ],
+   [
+    "Write a first draft weighted on the grid",
+    360,
+    45
+   ],
+   [
+    "Check durations, amounts and length",
+    45,
+    5
+   ]
+  ],
+  "stats": [
+   [
+    "2",
+    "contradictions caught before the deadline, with sources"
+   ],
+   [
+    "4/4",
+    "parts of the grid covered, in the right place"
+   ]
+  ],
+  "errors": [
+   "a design duration outside the rules, copied from an old statement",
+   "a contradiction in the brief that called for a clarification question"
+  ],
+  "total": [
+   615,
+   65
+  ]
+ },
+ "docx": "methodology-statement-larkfield-draft"
+}
