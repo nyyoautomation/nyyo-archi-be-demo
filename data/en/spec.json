@@ -1,5 +1,5 @@
 {
- "id": "cctp",
+ "id": "spec",
  "icon": "git-compare",
  "name": "Spec ↔ BoQ ↔ drawings",
  "short": "Check before issuing tender documents",
@@ -185,7 +185,7 @@
  ],
  "fields": [
   {
-   "id": "seuil",
+   "id": "threshold",
    "label": "Alert threshold for quantity differences",
    "type": "number",
    "value": 5,
@@ -199,13 +199,13 @@
    "label": "Type C2 quantity difference (18 vs 16, i.e. 12.5%) under the threshold",
    "ref": "E10",
    "rule": {
-    "f": "seuil",
+    "f": "threshold",
     "op": ">=",
     "v": 12.5,
     "vf": null
    },
-   "ok": "Threshold {seuil}%: difference tolerated",
-   "ko": "Threshold {seuil}%: difference flagged"
+   "ok": "Threshold {threshold}%: difference tolerated",
+   "ko": "Threshold {threshold}%: difference flagged"
   }
  ],
  "output": {

@@ -1,5 +1,5 @@
 {
- "id": "cr",
+ "id": "minutes",
  "icon": "clipboard-list",
  "name": "Site meeting minutes",
  "short": "Weekly site meeting",
@@ -143,7 +143,7 @@
  ],
  "fields": [
   {
-   "id": "cloisons",
+   "id": "partitions",
    "label": "Second-floor partitions start (trade 07)",
    "type": "date",
    "value": "2026-10-26",
@@ -151,7 +151,7 @@
    "hint": "Date given in the meeting"
   },
   {
-   "id": "etanch",
+   "id": "waterproofing",
    "label": "New due date, roof B membrane (trade 04)",
    "type": "date",
    "value": "2026-10-23",
@@ -159,7 +159,7 @@
    "hint": ""
   },
   {
-   "id": "prochaine",
+   "id": "next_meeting",
    "label": "Next meeting",
    "type": "date",
    "value": "2026-10-27",
@@ -173,39 +173,39 @@
    "label": "Partitions not before the programme date (Nov 2, 2026)",
    "ref": "E5",
    "rule": {
-    "f": "cloisons",
+    "f": "partitions",
     "op": ">=",
     "v": "2026-11-02",
     "vf": null
    },
-   "ok": "Start {cloisons}: in line with the programme",
-   "ko": "Start {cloisons}: before the Nov 2 programme date"
+   "ok": "Start {partitions}: in line with the programme",
+   "ko": "Start {partitions}: before the Nov 2 programme date"
   },
   {
    "id": "Q2",
    "label": "Roof watertight before partitions start",
    "ref": "E5",
    "rule": {
-    "f": "etanch",
+    "f": "waterproofing",
     "op": "<",
     "v": null,
-    "vf": "cloisons"
+    "vf": "partitions"
    },
-   "ok": "Roof done {etanch}, before partitions",
-   "ko": "Roof done {etanch}: not before partitions"
+   "ok": "Roof done {waterproofing}, before partitions",
+   "ko": "Roof done {waterproofing}: not before partitions"
   },
   {
    "id": "Q3",
    "label": "Next meeting after the Oct 20 meeting",
    "ref": "E10",
    "rule": {
-    "f": "prochaine",
+    "f": "next_meeting",
     "op": ">",
     "v": "2026-10-20",
     "vf": null
    },
-   "ok": "Meeting #15 on {prochaine}",
-   "ko": "Date to fix: {prochaine}"
+   "ok": "Meeting #15 on {next_meeting}",
+   "ko": "Date to fix: {next_meeting}"
   }
  ],
  "output": {
@@ -243,7 +243,7 @@
       "todo": false
      },
      {
-      "t": "Trade 07 Drywall: second-floor partitions announced to start {cloisons}.",
+      "t": "Trade 07 Drywall: second-floor partitions announced to start {partitions}.",
       "cite": [
        "E4"
       ],
@@ -274,7 +274,7 @@
         "14.1",
         "04",
         "Finish the south parapet membrane upstands, roof B",
-        "{etanch}",
+        "{waterproofing}",
         "Late (was 13.6)"
        ],
        "cite": [
@@ -287,7 +287,7 @@
         "14.2",
         "07",
         "Start second-floor partitions once the building is watertight",
-        "{cloisons}",
+        "{partitions}",
         "To confirm"
        ],
        "cite": [
@@ -327,7 +327,7 @@
     "h": "Next meeting",
     "items": [
      {
-      "t": "Tuesday {prochaine}, 9:00 am on site.",
+      "t": "Tuesday {next_meeting}, 9:00 am on site.",
       "cite": [
        "E9",
        "E10"

@@ -157,7 +157,7 @@
  ],
  "fields": [
   {
-   "id": "duree",
+   "id": "duration",
    "label": "Proposed design duration, concept to tender",
    "type": "number",
    "value": 30,
@@ -165,7 +165,7 @@
    "hint": "Taken from your previous statement: to check"
   },
   {
-   "id": "chef",
+   "id": "project_lead",
    "label": "Named project lead",
    "type": "text",
    "value": "Claire Holden (fictional)",
@@ -195,25 +195,25 @@
    "label": "Design duration within the 26-week maximum",
    "ref": "E3",
    "rule": {
-    "f": "duree",
+    "f": "duration",
     "op": "<=",
     "v": 26,
     "vf": null
    },
-   "ok": "{duree} weeks: within the rules",
-   "ko": "{duree} weeks: over the 26-week maximum"
+   "ok": "{duration} weeks: within the rules",
+   "ko": "{duration} weeks: over the 26-week maximum"
   },
   {
    "id": "Q2",
    "label": "Project lead named",
    "ref": "E10",
    "rule": {
-    "f": "chef",
+    "f": "project_lead",
     "op": "nonempty",
     "v": null,
     "vf": null
    },
-   "ok": "{chef}",
+   "ok": "{project_lead}",
    "ko": "Name someone"
   },
   {
@@ -278,7 +278,7 @@
     "weight": 15,
     "items": [
      {
-      "t": "Project lead: {chef}, single point of contact for the client from concept to handover.",
+      "t": "Project lead: {project_lead}, single point of contact for the client from concept to handover.",
       "cite": [
        "E10"
       ],
@@ -303,7 +303,7 @@
     "weight": 15,
     "items": [
      {
-      "t": "Design from concept to tender documents in {duree} weeks, excluding client sign-off periods.",
+      "t": "Design from concept to tender documents in {duration} weeks, excluding client sign-off periods.",
       "cite": [
        "E3"
       ],
